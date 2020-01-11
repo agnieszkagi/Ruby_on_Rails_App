@@ -5,7 +5,7 @@ class IdeasController < ApplicationController
   # GET /ideas.json
   def index
     @ideas = Idea.all
-    @dupa = "dupa"
+    @Ruby = "Ruby on Rails"
   end
 
   # GET /ideas/1
