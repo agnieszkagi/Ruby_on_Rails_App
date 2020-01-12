@@ -18,7 +18,9 @@
   <%= f.hidden_field :idea_id, value: @idea.id %>
   <%=f.submit'Comment'%>
 <%end%>
-<%@idea.comments.each do |comment| %>
+<%@idea.comments.reverse_each do |comment| %>
+<ul>
 <%=comment.body %>
 <%=comment.username%>
+</ul>
 <%end%>
