@@ -23,6 +23,16 @@
         <li class="nav-item active">
           <a class="nav-link" href="/ideas">Ideas</a>
         </li>
+        <li class="nav-item active">
+          <%if user_signed_in?%>
+            <%=link_to "log out", destroy_user_session_path, class:"btn btn-primary", method: :delete%>
+          
+          <%else%>
+            <%=link_to "login", new_user_session_path, class:"btn btn-primary"%>
+            <%=link_to "register", new_user_registration_path, class:"btn btn-primary"%>
+          <%end%>
+      
+        </li>
       </ul>
     </div>
   </div>
